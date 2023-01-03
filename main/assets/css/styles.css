@@ -1,0 +1,760 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar{
+    position: fixed;
+    width:100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: "Ubuntu", sans-serif;
+    transition: color 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+color: crimson;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    transition: color 0.3s ease; 
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+    transition: color 0.3s ease; 
+}
+
+
+/* estilo menu btn */
+
+    .menu-btn{
+        color: #fff;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+    .scroll-up-btn{
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background: crimson;
+        right: 30px;
+        bottom: 10px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        z-index: 9999;
+        font-size: 30px;
+        border-radius: 6px;
+        cursor: pointer;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    .scroll-up-btn.show{
+        bottom: 30px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+/* Estilos comunes en las secciones */
+
+section{
+    padding: 50px 0;
+}
+.about, .services, .skills, .portfolio, .contact, .legal, .privacidad, .cookies, footer{
+    font-family: 'Poppins', sans-serif ;
+}
+.about .about-content,
+.services .services-content,
+.skills .skills-content,
+.contact .contact-content,
+.legal .legal-content,
+.privacidad .privacidad-content
+.cookies .cookies-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif ;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 165px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.angulo1{
+    background-color:#111;
+    height: 110px;
+    width: 100%;
+    position: relative;
+}
+.angulo1::after{
+    background-color:white;
+    clip-path: polygon(100% 0,0 100%,0 0);
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 100%;
+}
+.angulo2{
+    background-color:#111;
+    height: 110px;
+    width: 100%;
+    position: relative;
+}
+.angulo2::after{
+    background-color:white;
+    clip-path: polygon(100% 100%,0 100%,0 0);
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 100%;
+}
+/* Seccion Home */
+
+.home{
+    display: flex;
+    background: url("../images/img1.png") no-repeat center;
+    background-size:cover;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: "Ubuntu", sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color:#fff;
+    background: none;
+}
+
+/* Seccion About */
+
+
+.about .title::after{
+    content: "Quién Soy";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right #boton{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a{
+    display: inline-block;
+    font-size: 20px;
+    color: #111;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* Seccion Servicios */
+
+.services, .portfolio{
+    color: #fff;
+    background: #111;
+}
+.services .title::before,
+.portfolio .title::before{
+    background: #fff;
+}
+.services .title::after,
+.portfolio .title::after{
+    background: #111;
+    content: "Lo que hago"
+}
+.services .services-content .card{
+width: calc(33% - 20px);
+background: #222;
+text-align: center;
+border-radius: 6px;
+padding: 20px 25px;
+cursor: pointer;
+transition: all 0.3s ease;
+
+}
+.services .services-content .card:hover{
+    background: crimson;
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .services-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+
+}
+.services .services-content .card:hover i{
+    color: #fff;
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Seccion Skills */
+
+.skills .title::after{
+    content: "Mis habilidades";
+}
+.skills .skills-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+.skills .skills-content .card{
+    display: inline-block;
+    height:70px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+.skills .skills-content .card figure,
+.skills .skills-content .card figure figcaption{
+    text-align: center;
+}
+.skills .skills-content .card img{
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    margin:auto;
+    position: relative;
+}
+.skills .skills-content .card1 img{
+    width: 80px;
+}
+.skills .skills-content .card2 img{
+    width: 120px;
+}
+.skills .skills-content img:hover{
+    filter: grayscale(0%);
+}
+/*  Seccion Portfolio*/
+.portfolio .title::after{
+    content: "Mis proyectos";
+}
+.portfolio .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+.portfolio .carousel .card:hover{
+    background: crimson;
+}
+.portfolio .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.portfolio .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.portfolio .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.portfolio .carousel .card img{
+height: 150px;
+width: 300px;
+object-fit: cover;
+border-radius: 10px;
+transition: all 0.3s ease;
+}
+
+.portfolio .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{background: crimson!important;
+}
+
+/*   Seccion Contacto   */
+
+.contact .title::after{
+    content: "Hablemos!";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .left .text{
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 30px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 35px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+color: #333;
+}
+.contact .right form .fields{
+display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+height: 45px;
+width: 100%;
+margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name, 
+.contact .right form .email
+{
+margin-right: 10px;
+}
+.contact .right form .phone{
+margin-left: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline:none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right .mensaje{
+
+    margin-left: 20px;
+    height: 47px;
+    width: 350px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+/* Seccion Footer */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a, div.form-check a{
+    color: crimson;
+    text-decoration: none;
+}
+div.form-check{
+    margin-bottom: 10px;
+}
+.contact-link{
+    color:#333;
+}
+
+
+/*  Aviso Legal  //  Politica de Privacidad  */
+
+    .legal.header,
+    .privacidad.header{
+        background-color:grey;
+    }
+    .legal .title,
+    .privacidad .title,
+    .cookies .title{
+        margin-top: 50px;
+    }
+
+    .legal .title::after{
+        content: "Legal Advice";
+    }
+    .privacidad .title::after{
+        content: "Privacy Policy";
+    }
+
+    .legal .legal-content h3,
+    .privacidad .privacidad-content h3{
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .legal .legal-content .apartado,
+    .privacidad .privacidad-content .apartado{
+        margin-bottom: 55px;
+    }
+    .legal .legal-content p,
+    .legal .legal-content ul,
+    .privacidad .privacidad-content p,
+    .privacidad .privacidad-content ul{
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .legal .legal-content a,
+    .privacidad .privacidad-content a{
+        display: inline-block;
+        font-size: 20px;
+        color: #111;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    ul.ul-1{
+        margin-left:30px;
+    }
+    ul.ul-2{
+        margin-left:65px;
+    }
+
+
+/*  Media query  */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active::before{
+        content:"\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width:100%;
+        left: -100%;
+        top: 0;
+        background:#111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin:20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .services-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .card{
+        width: 33%;
+        margin-bottom: 35px;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 75px;
+    }
+
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+        padding: 9px 20px;
+    }
+    .services .services-content .card{
+        width: 100%;
+    }
+    .skills .skills-content .card{
+        width: 50%;
+        margin-bottom: 75px;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}

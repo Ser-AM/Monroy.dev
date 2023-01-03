@@ -1,0 +1,88 @@
+<!-- Section Contact -->
+<section class="contact" id="contact">
+    <div class="max-width">
+        <h2 class="title">Contacto</h2>
+        <div class="contact-content">
+            <div class="column left">
+                <div class="text">¿Hablamos?</div>
+                <p>¿Tienes un proyecto en mente?</p>
+                <p>¿Una propuesta laboral?</p>
+                <p>¿Te apetece charlar?</p>
+                <p>Escribeme y te contestaré lo antes posible!</p>
+                <p> </p>
+                <div class="icons">
+
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Sergio Alvarez Monroy</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Móstoles, Madrid</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">
+                                <a class="contact-link" href="mailto:info@monroy.dev">info@monroy.dev</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                        <div class="info">
+                            <div class="head">
+                                <a class="contact-link" href="https://www.linkedin.com/in/sergio-am/" target="_blank">sergio-am</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column right">
+                <div class="text">Escribeme!</div>
+                <form method="post" id="form-contacto" enctype="multipart/form-data">
+                    <div class="field name">
+                        <input type="text" name='nombre' id="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="fields">
+                        <div class="field email">
+                            <input type="email" name='email' id="email" placeholder="Email" required>
+                        </div>
+                        <div class="field phone">
+                            <input type="tel" name='telefono' id="telefono" placeholder="Telefono (opcional)"
+                                pattern="[0-9]{9}">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" name='asunto' id="asunto" placeholder="Asunto" required>
+                    </div>
+                    <div class="field textarea">
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Escribe aquí lo que me quieras contar..." required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="check" id="check" value="checkedValue"
+                                required>
+                            He leido y acepto el <a href="https://monroy.dev/avisolegal.php">aviso legal</a> y la <a
+                                href="https://monroy.dev/politica-privacidad.php">política de privacidad</a>.
+                        </label>
+                    </div>
+                    <div class="button">
+                        <button id="submit-formulario" type="submit">Enviar Mensaje</button>
+                    </div>
+                </form>
+                <div class="mensaje"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  End Section Contact -->
