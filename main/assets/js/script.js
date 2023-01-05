@@ -1,16 +1,12 @@
 $(document).ready(function(){
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass('sticky');
-        }else{
-            $('.navbar').removeClass('sticky');
-        }
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass('show');
-        }else{
-            $('.scroll-up-btn').removeClass('show');
-        }
+    $(window).scroll(function() {
+        const showSticky = $(this).scrollTop() > 20;
+        $('.navbar').toggleClass('sticky', showSticky);
+        
+        const showScrollUpBtn = $(this).scrollTop() > 500;
+        $('.scroll-up-btn').toggleClass('show', showScrollUpBtn);
     });
+      
 
     $(document).ready(function() {
         // Obtener el año actual
@@ -39,7 +35,7 @@ $(document).ready(function(){
         loop: true
     });
     //typing2 animation script
-    var typed = new Typed(".typing-2", {
+    var typed2 = new Typed(".typing-2", {
         strings: ["Páginas Web", "Desarrollos a medida", "Herramientas de gestión", "Apps", ],
         typeSpeed: 60,
         backSpeed:40,
