@@ -474,7 +474,7 @@ transition: all 0.3s ease;
 /*   Seccion Contacto   */
 
 .contact .title::after{
-    content: "Hablemos!";
+    content: "¡Hablemos!";
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
